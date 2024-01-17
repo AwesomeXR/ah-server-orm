@@ -13,10 +13,7 @@ declare module 'ah-server' {
 // for declare merge
 export interface IAppRepoMap {}
 
-export const createOrmExtension = (
-  opt: DataSourceOptions,
-  createAllRepo: (ds: DataSource) => IAppRepoMap
-): IBaseExtension => {
+export const createOrmExtension = (opt: DataSourceOptions, createAllRepo: (ds: DataSource) => IAppRepoMap): IBaseExtension => {
   const app = {
     async initORM() {
       const _app: IApplication = this as any;
